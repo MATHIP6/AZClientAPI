@@ -54,13 +54,15 @@ public class AZPlayer {
         final boolean swordBlocking = true;
         final boolean hitAndBlock = true;
         final boolean oldEnchantments = true;
+        final boolean sidebar_scores = false;
         this.service.sendPLSPMessage(player, new PLSPPacketConfFlags(Arrays.asList(
                 new PLSPPacketConfFlag("attack_cooldown", attackCooldown),
                 new PLSPPacketConfFlag("player_push", playerPush),
                 new PLSPPacketConfFlag("large_hitbox", largeHitbox),
                 new PLSPPacketConfFlag("sword_blocking", swordBlocking),
                 new PLSPPacketConfFlag("hit_and_block", hitAndBlock),
-                new PLSPPacketConfFlag("old_enchantments", oldEnchantments)
+                new PLSPPacketConfFlag("old_enchantments", oldEnchantments),
+                new PLSPPacketConfFlag("sidebar_scores", sidebar_scores)
         )));
     }
 

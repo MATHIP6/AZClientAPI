@@ -1,5 +1,6 @@
 package fr.speccy.azclientapi.bukkit;
 
+import fr.speccy.azclientapi.bukkit.commands.AZCommands;
 import fr.speccy.azclientapi.bukkit.packets.PacketWindow;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -11,6 +12,7 @@ public final class AZClientPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         AZManager = new AZManager((Plugin)this);
+        getCommand("az").setExecutor(new AZCommands());
         getServer().getPluginManager().registerEvents(new PacketWindow(this), (Plugin)this);
         main = this;
     }
